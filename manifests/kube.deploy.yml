@@ -10,7 +10,7 @@ spec:
   ports:
   # the port that this service should serve on
   - name: http
-    port: 8080
+    port: 8088
 
   selector:
     app: "javaspringapp-selector"
@@ -34,7 +34,7 @@ spec:
         readinessProbe:
           httpGet:
             path: /health
-            port: 8080
+            port: 8088
           initialDelaySeconds: 20
         # resources:
         #   requests:

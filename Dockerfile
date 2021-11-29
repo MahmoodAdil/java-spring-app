@@ -34,8 +34,8 @@ FROM adoptopenjdk/openjdk8:ubi-jre
 RUN mkdir /opt/app
 COPY --from=builder /app/target/javaspringapp-1.0-SNAPSHOT.jar /opt/app/app.jar
 
-ENV PORT 8080
+ENV PORT 8088
 
-EXPOSE 8080
+EXPOSE 8088
 
 ENTRYPOINT [ "sh", "-c", "java -jar /opt/app/app.jar" ]
